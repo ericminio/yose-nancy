@@ -6,7 +6,7 @@ I pass the First Web service challenge :)
 
 check your install: open the solution and run the tests
 
-You should see the 2 tests pass
+You should see the 7 tests pass
 
 ## See it working
 
