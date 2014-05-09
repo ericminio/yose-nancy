@@ -27,6 +27,6 @@ Global
 		{D496B163-42A5-4A92-B7C8-D4F5FCB6A448}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Yose\Yose.csproj
+		StartupItem = Main\Main.csproj
 	EndGlobalSection
 EndGlobal
