@@ -1,4 +1,8 @@
 test-results
 .DS_Store
 bin
+obj
+*.pkg
+TestResult.xml
+*.userprefs
 
