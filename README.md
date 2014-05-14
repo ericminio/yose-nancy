@@ -1,3 +1,5 @@
+[![Travis Build Status](https://travis-ci.org/yosethegame/dotnet-nancy-example.svg?branch=master)](https://travis-ci.org/yosethegame/dotnet-nancy-example)
+
 I pass the First Web service challenge :)
 
 ## Get ready
