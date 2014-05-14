@@ -1,0 +1,7 @@
+language: objective-c
+
+before-install: ./pre-build.sh
+
+script: ./nunit.sh
+
+
