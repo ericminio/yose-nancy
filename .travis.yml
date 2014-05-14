@@ -1,9 +1,9 @@
 language: objective-c
 
 before_install: 
- - wget "http://download.mono-project.com/archive/3.2.0/macos-10-x86/MonoFramework-MDK-3.2.0.macos10.xamarin.x86.pkg" -o mono-3.2.0.pkg
- - ls
- - sudo installer -pkg mono-3.2.0.pkg -target /
+ - wget "http://download.mono-project.com/archive/3.2.0/macos-10-x86/MonoFramework-MDK-3.2.0.macos10.xamarin.x86.pkg"
+ - ls -l
+ - sudo installer -pkg MonoFramework-MDK-3.2.0.macos10.xamarin.x86.pkg -target /
 
 script: ./nunit.sh
 
