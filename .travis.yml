@@ -6,7 +6,7 @@ before_install:
  - sudo installer -pkg MonoFramework-MDK-3.2.0.macos10.xamarin.x86.pkg -target /
  - wget "http://nodejs.org/dist/v0.10.28/node-v0.10.28.pkg"
  - ls -la
- - sudo installer -pkg node-v0-10.28.pkg -target /
+ - sudo installer -pkg node-v0.10.28.pkg -target /
  - npm install
 
 script:
