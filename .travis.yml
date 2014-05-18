@@ -13,4 +13,5 @@ script:
  - ./nunit.sh
  - npm test
 
+after_success: ./somee.sh
 
