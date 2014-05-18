@@ -30,7 +30,7 @@ namespace Yose
 	{
 		public string GetRootPath()
 		{
-			return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ".");
+			return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "views");
 		}
 	}
 }
