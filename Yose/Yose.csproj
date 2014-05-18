@@ -49,8 +49,7 @@
     </MonoDevelop>
   </ProjectExtensions>
   <ItemGroup>
-    <Compile Include="PingModule.cs" />
-    <Compile Include="HelloYoseModule.cs" />
+    <Compile Include="NancyRoutes.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />

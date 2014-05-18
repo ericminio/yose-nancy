@@ -15,7 +15,7 @@ namespace Tests
 		[SetUp]
 		public void HelloYoseModule()
 		{
-			browser = new Browser(with => with.Module(new HelloYoseModule()));
+			browser = new Browser(with => with.Module(new NancyRoutes()));
 			result = browser.Get("/", with => { with.HttpRequest(); });
 		}
 

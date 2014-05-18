@@ -15,7 +15,7 @@ namespace Tests
 		[SetUp]
 		public void PingModule()
 		{
-			browser = new Browser(with => with.Module(new PingModule()));
+			browser = new Browser(with => with.Module(new NancyRoutes()));
 			result = browser.Get("/ping", with => { with.HttpRequest(); });
 		}
 
