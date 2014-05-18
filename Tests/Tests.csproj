@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="TddReadyTest.cs" />
     <Compile Include="PingTest.cs" />
+    <Compile Include="HelloYoseTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yose\Yose.csproj">

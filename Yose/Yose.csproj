@@ -50,8 +50,14 @@
   </ProjectExtensions>
   <ItemGroup>
     <Compile Include="PingModule.cs" />
+    <Compile Include="HelloYoseModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
