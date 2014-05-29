@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using Nancy;
-using System.Web.Script.Serialization;
 using System.Collections.Generic;
 
 namespace Yose
@@ -12,14 +11,16 @@ namespace Yose
 		{
 			Get["/"] = _ => { return View["index.html"]; };
 			Get["/ping"] = _ => Response.AsJson( new { alive = true } );
-			Get ["/primeFactors?number={number}"] = PrimeFactorsEndpoint;
+			Get["/primeFactors"] = PrimeFactorsEndpoint;
 		}
 
 		object PrimeFactorsEndpoint (dynamic parameters)
 		{
+			var number = Request.Query.number;
+
 			return Response.AsJson(new ResponseContent { 
-				Number = parameters.number,
-				Decomposition = new Mathematician().PrimeFactorsOf(parameters.number)
+				Number = number,
+				Decomposition = new Mathematician().PrimeFactorsOf(number)
 			});
 		}
 	}

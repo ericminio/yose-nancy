@@ -17,7 +17,11 @@ namespace Tests
 		public void PrimeFactorsModule()
 		{
 			browser = new Browser(with => with.Module(new NancyRoutes()));
-			result = browser.Get("/primeFactors?number=8", with => { with.HttpRequest(); });
+			result = browser.Get("/primeFactors", with => 
+			{ 
+				with.HttpRequest(); 
+				with.Query("number", "8");
+			});
 		}
 
 		[Test]
@@ -47,22 +51,6 @@ namespace Tests
 
 			Assert.That(content["decomposition"], Is.EqualTo(new List<int> { 2, 2, 2 }));
 		}
-
-		[TestFixture]
-		public class MathematicianTest
-		{
-			[Test]
-			public void CanDecompose2()
-			{
-				Assert.That (new Mathematician().PrimeFactorsOf(2), Is.EqualTo(new List<int> { 2 }));
-			}
-
-			[Test]
-			public void CanDecompose4()
-			{
-				Assert.That (new Mathematician().PrimeFactorsOf(4), Is.EqualTo(new List<int> { 2, 2 }));
-			}
-}
 	}
 }
 

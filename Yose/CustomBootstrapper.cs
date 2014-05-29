@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using Nancy;
-using System.Web.Script.Serialization;
 
 namespace Yose
 {

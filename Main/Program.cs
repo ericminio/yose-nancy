@@ -10,7 +10,7 @@ namespace Main
 		{
 			using (var host = new NancyHost(new Uri("http://localhost:1234")))
 			{
-				Console.WriteLine ("Starting...");
+				StaticConfiguration.DisableErrorTraces = false;
 				host.Start();
 				Console.ReadLine();
 			}

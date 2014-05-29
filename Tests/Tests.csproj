@@ -61,13 +61,17 @@
   <ItemGroup>
     <Compile Include="TddReadyTest.cs" />
     <Compile Include="PingChallenge.cs" />
-    <Compile Include="PrimeFactorsWorld.cs" />
     <Compile Include="HelloYose.cs" />
+    <Compile Include="PrimeFactors\MathematicianTest.cs" />
+    <Compile Include="PrimeFactors\PrimeFactorsWorld.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yose\Yose.csproj">
       <Project>{59B6164C-72C2-4AC4-B8C3-ACE6DA885C93}</Project>
       <Name>Yose</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PrimeFactors\" />
   </ItemGroup>
 </Project>
