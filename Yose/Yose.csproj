@@ -38,6 +38,12 @@
     <Reference Include="Nancy.Hosting.Aspnet">
       <HintPath>..\packages\Nancy\Nancy.Hosting.Aspnet.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>False</Private>
+      <Package>system.web.extensions_1.0</Package>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -50,6 +56,10 @@
   </ProjectExtensions>
   <ItemGroup>
     <Compile Include="NancyRoutes.cs" />
+    <Compile Include="CustomBootstrapper.cs" />
+    <Compile Include="CustomRootPathProvider.cs" />
+    <Compile Include="PrimeFactors\ResponseContent.cs" />
+    <Compile Include="PrimeFactors\Mathematician.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -61,5 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="views\" />
+    <Folder Include="PrimeFactors\" />
   </ItemGroup>
 </Project>

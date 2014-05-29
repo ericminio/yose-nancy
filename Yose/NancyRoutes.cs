@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using Nancy;
+using System.Web.Script.Serialization;
+using System.Collections.Generic;
 
 namespace Yose
 {
@@ -10,27 +12,15 @@ namespace Yose
 		{
 			Get["/"] = _ => { return View["index.html"]; };
 			Get["/ping"] = _ => Response.AsJson( new { alive = true } );
-		}
-	}
-
-	public class CustomBootstrapper : DefaultNancyBootstrapper
-	{
-		public CustomBootstrapper() 
-		{
-			StaticConfiguration.DisableErrorTraces = false;
+			Get ["/primeFactors?number={number}"] = PrimeFactorsEndpoint;
 		}
 
-		protected override IRootPathProvider RootPathProvider
+		object PrimeFactorsEndpoint (dynamic parameters)
 		{
-			get { return new CustomRootPathProvider(); }
-		}
-	}
-
-	public class CustomRootPathProvider : IRootPathProvider
-	{
-		public string GetRootPath()
-		{
-			return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "views");
+			return Response.AsJson(new ResponseContent { 
+				Number = parameters.number,
+				Decomposition = new Mathematician().PrimeFactorsOf(parameters.number)
+			});
 		}
 	}
 }

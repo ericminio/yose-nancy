@@ -7,7 +7,7 @@ using System.Web.Script.Serialization;
 namespace Tests
 {
 	[TestFixture]
-	public class PingTest
+	public class PingChallenge
 	{
 		private Browser browser;
 		private BrowserResponse result;

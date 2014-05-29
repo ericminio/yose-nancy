@@ -7,7 +7,7 @@ using System.Web.Script.Serialization;
 namespace Tests
 {
 	[TestFixture]
-	public class HelloYoseTest
+	public class HelloYose
 	{
 		private Browser browser;
 		private BrowserResponse result;

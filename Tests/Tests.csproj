@@ -60,8 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TddReadyTest.cs" />
-    <Compile Include="PingTest.cs" />
-    <Compile Include="HelloYoseTest.cs" />
+    <Compile Include="PingChallenge.cs" />
+    <Compile Include="PrimeFactorsWorld.cs" />
+    <Compile Include="HelloYose.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yose\Yose.csproj">
