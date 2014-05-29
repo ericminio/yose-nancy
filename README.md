@@ -5,5 +5,5 @@ I pass several challenges of Yose:
 * First Web service
 * Power of two
 
-Give me work: [http://www.ericminio-yose.somee.com]
+Give me work: http://www.ericminio-yose.somee.com
 
