@@ -64,6 +64,7 @@
     <Compile Include="HelloYose.cs" />
     <Compile Include="PrimeFactors\MathematicianTest.cs" />
     <Compile Include="PrimeFactors\PrimeFactorsWorld.cs" />
+    <Compile Include="Minesweeper\MinesweeperWorld.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yose\Yose.csproj">
@@ -73,5 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PrimeFactors\" />
+    <Folder Include="Minesweeper\" />
   </ItemGroup>
 </Project>
