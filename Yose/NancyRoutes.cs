@@ -12,6 +12,7 @@ namespace Yose
 			Get["/"] = _ => { return View["index.html"]; };
 			Get["/ping"] = _ => Response.AsJson( new { alive = true } );
 			Get["/primeFactors"] = PrimeFactorsEndpoint;
+			Get["/minesweeper"] = _ => { return View["minesweeper.html"]; };
 		}
 
 		object PrimeFactorsEndpoint (dynamic parameters)
