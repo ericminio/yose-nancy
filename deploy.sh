@@ -1,7 +1,7 @@
-ftp -v ftp://ericminio:Yose12345@www.ericminio-yose.somee.com <<-ENDTAG
+ftp -v ftp://ericminio-001:Yose12345@ftp.mywindowshosting.com <<-ENDTAG
 binary
 prompt
-cd www.ericminio-yose.somee.com
+cd site1
 
 mdelete views/*
 rmdir views
