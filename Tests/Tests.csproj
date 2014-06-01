@@ -63,7 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TddReadyTest.cs" />
     <Compile Include="PingChallenge.cs" />
     <Compile Include="HelloYose.cs" />
     <Compile Include="PrimeFactors\MathematicianTest.cs" />
@@ -71,6 +70,7 @@
     <Compile Include="Minesweeper\MinesweeperWorld.cs" />
     <Compile Include="Minesweeper\MinesweeperPage.cs" />
     <Compile Include="Minesweeper\MinesweeperScript.cs" />
+    <Compile Include="TddReadyTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yose\Yose.csproj">
@@ -81,5 +81,8 @@
   <ItemGroup>
     <Folder Include="PrimeFactors\" />
     <Folder Include="Minesweeper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Minesweeper\minesweeper.spec.js" />
   </ItemGroup>
 </Project>

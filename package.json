@@ -2,7 +2,8 @@
   "name": "yose-nancy",
   "version": "0.0.1",
   "devDependencies": {
-    "jasmine-node": "~1.13.1"
+    "jasmine-node": "~1.13.1",
+    "jquery": "1.8.3"
   },
   "engines": {
     "node": "0.8.x",
