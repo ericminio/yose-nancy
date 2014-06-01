@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using Nancy;
+using Nancy.Conventions;
 
 namespace Yose
 {
@@ -15,6 +16,12 @@ namespace Yose
 		protected override IRootPathProvider RootPathProvider
 		{
 			get { return new CustomRootPathProvider(); }
+		}
+
+		protected override void ConfigureConventions(NancyConventions nancyConventions)
+		{
+			nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("Static", @"Static"));
+			base.ConfigureConventions(nancyConventions);
 		}
 	}
 	
