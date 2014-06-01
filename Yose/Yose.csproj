@@ -66,9 +66,13 @@
     <None Include="views\minesweeper.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="static\minesweeper.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="views\" />
     <Folder Include="PrimeFactors\" />
+    <Folder Include="static\" />
   </ItemGroup>
 </Project>

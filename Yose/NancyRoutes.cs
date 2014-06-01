@@ -13,6 +13,16 @@ namespace Yose
 			Get["/ping"] = _ => Response.AsJson( new { alive = true } );
 			Get["/primeFactors"] = PrimeFactorsEndpoint;
 			Get["/minesweeper"] = _ => { return View["minesweeper.html"]; };
+
+			Get["/static/{file}"] = p =>
+			{
+				string path = string.Format("static/{0}", p.file);
+				var content = File.ReadAllText(path);
+				var response = (Response) content;
+				response.ContentType = "application/javascript";
+
+				return response;
+			};
 		}
 
 		object PrimeFactorsEndpoint (dynamic parameters)
