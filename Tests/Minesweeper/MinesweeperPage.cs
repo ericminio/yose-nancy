@@ -8,28 +8,32 @@ using System.Xml;
 namespace Tests
 {
 	[TestFixture]
-	public class MinesweeperWorld
+	public class MinesweeperPage
 	{
 		private Browser browser;
 		private BrowserResponse result;
+		private HtmlDocument page;
 
 		[SetUp]
-		public void MinesweeperModule()
+		public void ThePage()
 		{
 			browser = new Browser(with => with.Module(new NancyRoutes()));
 			result = browser.Get("/minesweeper", with =>  { with.HttpRequest(); });
+			var content = result.Body.AsString ();
+			page = new HtmlDocument();
+			page.LoadHtml (content);
 		}
 
 		[Test]
-		public void IsOnline ()
+		public void HasTheExpectedTitle()
 		{
-			Assert.That(result.StatusCode, Is.EqualTo(Nancy.HttpStatusCode.OK));
+			Assert.That (page.GetElementbyId ("title").InnerText, Is.EqualTo ("Minesweeper"));
 		}
 
 		[Test]
-		public void HasATitle()
+		public void HasAGrid()
 		{
-			Assert.That(result.Body.AsString(), Is.StringContaining("id=\"title\""));
+			Assert.That (page.GetElementbyId ("grid"), Is.Not.Null);
 		}
 	}
 }
